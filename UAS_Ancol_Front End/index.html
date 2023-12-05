@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ancol - Jakarta Bay City</title>
+  <script>
+    var app = angular.module('promoApp', []);
+  </script>
+  
 
   <!-- 
     - favicon
@@ -29,6 +34,7 @@
 
 <body id="top">
 
+  
   <!-- 
     - #HEADER
   -->
@@ -221,6 +227,26 @@
 
         </div>
       </section>
+
+      <div ng-app="promoApp" ng-controller="promoCtrl">
+        <div class="promo-banner">
+          <img ng-src="{{ promoImage }}" alt="Promo Banner">
+          <h2>{{ promoTitle }}</h2>
+          <p>{{ promoDescription }}</p>
+          <a ng-href="{{ promoLink }}" target="_blank">{{ promoButton }}</a>
+        </div>
+      </div>
+      
+      <script>
+        app.controller('promoCtrl', function($scope) {
+          $scope.promoImage = 'images/PROMOCUL.jpg';
+          $scope.promoTitle = 'Special Promo!';
+          $scope.promoDescription = 'Get exclusive discounts on our amazing Vacation.';
+          $scope.promoLink = 'https://www.ancol.com/promo';
+          $scope.promoButton = 'Redeem Now !!';
+        });
+      </script>
+      
 
 
 
