@@ -114,3 +114,52 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+
+
+//LOAD MORE BAGIAN PACKAGES
+
+document.addEventListener('DOMContentLoaded', function () {
+  const viewMoreBtn = document.getElementById('view-more');
+  const viewLessBtn = document.getElementById('view-less');
+  let currentItem = 8;
+
+  // Function to hide all elements
+  function hideAllElement() {
+    const elementList = document.querySelectorAll('.package-list li');
+    elementList.forEach((element, index) => {
+      if (index >= currentItem) {
+        element.style.display = 'none';
+      } else {
+        element.style.display = 'flex';
+      }
+    });
+  }
+
+  // Initial hide for all elements except the first 3
+  hideAllElement();
+
+  // Event listener for Load More button
+  viewMoreBtn.addEventListener('click', () => {
+    const elementList = document.querySelectorAll('.package-list li');
+    
+    for (let i = currentItem; i < currentItem + 4 && i < elementList.length; i++) {
+      elementList[i].style.display = 'flex';
+    }
+    
+    currentItem += 4 ;
+
+    if (currentItem >= elementList.length) {
+      viewMoreBtn.style.display = 'none';
+      viewLessBtn.style.display = 'block'; // Show the "Show Less" button
+    }
+  });
+
+  // Event listener for Show Less button
+  viewLessBtn.addEventListener('click', () => {
+    currentItem = 3; // Reset the currentItem to 3
+    hideAllElement(); // Hide all elements
+    viewMoreBtn.style.display = 'flex'; // Show the "Load More" button
+    viewLessBtn.style.display = 'none'; // Hide the "Show Less" button
+  });
+});
