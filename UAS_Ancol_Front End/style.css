@@ -1331,4 +1331,32 @@ address {
 
   .container { max-width: 1180px; }
 
+  .promo-banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .promo-banner img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .promo-banner h2 {
+    color: #333;
+  }
+  
+  .promo-banner p {
+    color: #777;
+  }
+  
+  .promo-banner a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+  }
+  
 }
