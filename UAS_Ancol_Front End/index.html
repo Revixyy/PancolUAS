@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ancol - Jakarta Bay City</title>
+  <script>
+    var app = angular.module('promoApp', []);
+  </script>
+  
 
   <!-- 
     - favicon
@@ -29,6 +34,7 @@
 
 <body id="top">
 
+  
   <!-- 
     - #HEADER
   -->
@@ -122,11 +128,11 @@
             </li>
 
             <li>
-              <a href="#destination" class="navbar-link" data-nav-link>destination</a>
+              <a href="#destination" class="navbar-link" data-nav-link>rides</a>
             </li>
 
             <li>
-              <a href="#package" class="navbar-link" data-nav-link>packages</a>
+              <a href="#package" class="navbar-link" data-nav-link>destination</a>
             </li>
 
             <li>
@@ -224,8 +230,28 @@
         </div>
       </section>
 
+      <!-- 
+        - #PROMO
+      -->
 
+      <div ng-app="promoApp" ng-controller="promoCtrl">
+        <div class="promo-banner">
+          
+          <p class="section-subtitle">Uncover place</p>
 
+          <h2 class="h2 section-title">Get Yours Promo</h2>
+
+          <p class="section-text">
+            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
+            Sit ornare
+            mollitia tenetur, aptent.
+          </p>
+          <img ng-src="{{ promoImage }}" alt="Promo Banner">
+          <!-- <h2>{{ promoTitle }}</h2>
+          <p>{{ promoDescription }}</p> -->
+          <a ng-href="{{ promoLink }}" target="_blank">{{ promoButton }}</a>
+        </div>
+      </div>
 
 
       <!-- 
@@ -235,14 +261,12 @@
       <section class="popular" id="destination">
         <div class="container">
 
-          <p class="section-subtitle">Uncover place</p>
+          <p class="section-subtitle">Ancol Adventure</p>
 
-          <h2 class="h2 section-title">Popular destination</h2>
+          <h2 class="h2 section-title">Tours and Rides in Ancol</h2>
 
           <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+            SeaWorld, Atlantis, Samudra, pantai, dan Eco Park di Ancol menawarkan pengalaman yang seru dan tak terlupakan.
           </p>
 
           <ul class="popular-list">
@@ -349,11 +373,7 @@
               </div>
             </li>
 
-          </ul>
-
-          <button class="btn btn-primary">More destination</button>
-
-          <ul class="popular-list">
+            
             <li>
               <div class="popular-card">
 
@@ -372,15 +392,15 @@
                   </div>
 
                   <p class="card-subtitle">
-                    <a href="#">Sea World Ancol</a>
+                    <a href="#">Atlantis Ancol</a>
                   </p>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Antasena Tunnel</a>
+                    <a href="#">Asthatirta</a>
                   </h3>
 
                   <p class="card-text">
-                    Pesona Terowongan Bawah Laut yang Mengagumkan.
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                   </p>
 
                 </div>
@@ -388,40 +408,7 @@
               </div>
             </li>
 
-            <li>
-              <div class="popular-card">
-
-                <figure class="card-img">
-                  <img src="./images/SharkAquarium.jpg" alt="Shark Aquarium" loading="lazy">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-rating">
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                    <ion-icon name="star"></ion-icon>
-                  </div>
-
-                  <p class="card-subtitle">
-                    <a href="#">Sea World Ancol</a>
-                  </p>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Shark Aquarium</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Keindahan Laut Dalam dalam Sentuhan Megah dari ikan Hiu.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
+            
             <li>
               <div class="popular-card">
 
@@ -440,22 +427,231 @@
                   </div>
 
                   <p class="card-subtitle">
-                    <a href="#">Samudra Ancol</a>
+                    <a href="#">Atlantis Ancol</a>
                   </p>
 
                   <h3 class="h3 card-title">
-                    <a href="#">Cinema 5D</a>
+                    <a href="#">Asthatirta</a>
                   </h3>
 
                   <p class="card-text">
-                    Pengalaman Sinematik Dinamis dengan Realitas Menakjubkan.
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
                   </p>
 
                 </div>
 
               </div>
             </li>
+
+            
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/crazySlide.jpg" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/Mola-mola.jpg" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/SharkAquarium.jpg" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/Skybox.png" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/singaLaut.jpg" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="popular-card">
+
+                <figure class="card-img">
+                  <img src="./images/antilaRiver.png" alt="Crazy Slide" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+
+                  <p class="card-subtitle">
+                    <a href="#">Atlantis Ancol</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">Asthatirta</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+
           </ul>
+
+          <button class="btn btn-primary">More destintion</button>
 
         </div>
       </section>
@@ -471,14 +667,13 @@
       <section class="package" id="package">
         <div class="container">
 
-          <p class="section-subtitle">Popular Packeges</p>
+          <p class="section-subtitle">Destination Ticket</p>
 
-          <h2 class="h2 section-title">Checkout Our Packeges</h2>
+          <h2 class="h2 section-title">Destination in Ancol</h2>
 
           <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
+            Ancol menawarkan berbagai macam fasilitas dan atraksi untuk pengunjung dari berbagai kalangan. 
+            Berikut beberapa destinasi di Ancol dengan harga tiket yang disediakan
           </p>
 
           <ul class="package-list">
@@ -487,7 +682,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./images/SeaWorld.jpeg" alt="Experience The Great Holiday On Beach" loading="lazy">
+                  <img src="./images/SeaworldAncol.jpg" alt="Sea World" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -495,8 +690,7 @@
                   <h3 class="h3 card-title">Sea World</h3>
 
                   <p class="card-text">
-                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                    cras, aspernatur.
+                    Pertunjukan lumba-lumba, akuarium, dan kehidupan laut menarik di Ancol.
                   </p>
 
                   <ul class="card-meta-list">
@@ -521,7 +715,7 @@
                       <div class="meta-box">
                         <ion-icon name="location"></ion-icon>
 
-                        <p class="text">Malaysia</p>
+                        <p class="text">Jakarta</p>
                       </div>
                     </li>
 
@@ -533,7 +727,7 @@
 
                   <div class="wrapper">
 
-                    <p class="reviews">(25 reviews)</p>
+                    <p class="reviews">(1125 reviews)</p>
 
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
@@ -546,7 +740,7 @@
                   </div>
 
                   <p class="price">
-                    $750
+                    Rp145.000
                     <span>/ per person</span>
                   </p>
 
@@ -561,16 +755,15 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./images/DUFAN.jpeg" alt="Dufan Ancol" loading="lazy">
+                  <img src="./images/EcoparkAncol.jpg" alt="Eco Park Ancol" loading="lazy">
                 </figure>
 
                 <div class="card-content">
 
-                  <h3 class="h3 card-title">Dufan Ancol</h3>
+                  <h3 class="h3 card-title">Eco Park Ancol</h3>
 
                   <p class="card-text">
-                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                    cras, aspernatur.
+                    Taman alam terbuka, hijau, dan tenang di kawasan Ancol Jakarta.
                   </p>
 
                   <ul class="card-meta-list">
@@ -595,7 +788,7 @@
                       <div class="meta-box">
                         <ion-icon name="location"></ion-icon>
 
-                        <p class="text">Malaysia</p>
+                        <p class="text">Jakarta</p>
                       </div>
                     </li>
 
@@ -607,7 +800,7 @@
 
                   <div class="wrapper">
 
-                    <p class="reviews">(20 reviews)</p>
+                    <p class="reviews">(925 reviews)</p>
 
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
@@ -620,7 +813,7 @@
                   </div>
 
                   <p class="price">
-                    $520
+                    Rp25.000
                     <span>/ per person</span>
                   </p>
 
@@ -635,7 +828,7 @@
               <div class="package-card">
 
                 <figure class="card-banner">
-                  <img src="./images/Atlantis.jpeg" alt="Santorini Island's Weekend Vacation" loading="lazy">
+                  <img src="./images/AtlantisPancol.jpg" alt="Ancol Atlantis" loading="lazy">
                 </figure>
 
                 <div class="card-content">
@@ -643,8 +836,7 @@
                   <h3 class="h3 card-title">Atlantis Ancol</h3>
 
                   <p class="card-text">
-                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                    cras, aspernatur.
+                    Taman air seru dengan wahana permainan menyenangkan di Ancol Jakarta.
                   </p>
 
                   <ul class="card-meta-list">
@@ -669,7 +861,7 @@
                       <div class="meta-box">
                         <ion-icon name="location"></ion-icon>
 
-                        <p class="text">Ancol</p>
+                        <p class="text">Jakarta</p>
                       </div>
                     </li>
 
@@ -681,7 +873,7 @@
 
                   <div class="wrapper">
 
-                    <p class="reviews">(40 reviews)</p>
+                    <p class="reviews">(2267 reviews)</p>
 
                     <div class="card-rating">
                       <ion-icon name="star"></ion-icon>
@@ -694,7 +886,80 @@
                   </div>
 
                   <p class="price">
-                    Rp. 20.000,-
+                    Rp105.000
+                    <span>/ per person</span>
+                  </p>
+
+                  <button class="btn btn-secondary">Book Now</button>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="package-card">
+
+                <figure class="card-banner">
+                  <img src="./images/SamudraAncol.jpg" alt="Samudra Ancol" loading="lazy">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3 card-title">Samudra Ancol</h3>
+
+                  <p class="card-text">
+                    Pertunjukan dengan satwa air dan keindahan laut di Samudra Ancol Jakarta.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="time"></ion-icon>
+
+                        <p class="text">7D/6N</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="people"></ion-icon>
+
+                        <p class="text">pax: 10</p>
+                      </div>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <div class="meta-box">
+                        <ion-icon name="location"></ion-icon>
+
+                        <p class="text">Jakarta</p>
+                      </div>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+                <div class="card-price">
+
+                  <div class="wrapper">
+
+                    <p class="reviews">(798 reviews)</p>
+
+                    <div class="card-rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                  </div>
+
+                  <p class="price">
+                    Rp.120.000
                     <span>/ per person</span>
                   </p>
 
@@ -707,8 +972,8 @@
 
           </ul>
 
-          <button class="btn btn-primary">View All Packages</button>
-
+          <button class="btn btn-primary" id="view-more">View All Packages</button>
+          <button class="btn btn-primary" id="view-less">View Less</button>
         </div>
       </section>
 
