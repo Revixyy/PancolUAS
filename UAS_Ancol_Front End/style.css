@@ -103,6 +103,7 @@ label,
 button,
 ion-icon { display: block; }
 
+a,
 input,
 button {
   background: none;
@@ -110,6 +111,7 @@ button {
   font: inherit;
 }
 
+a,
 button { cursor: pointer; }
 
 input { width: 100%; }
@@ -447,8 +449,10 @@ body { background: var(--white); }
   margin-top: 35px;
 }
 
-
-
+/* Show Less */
+#show-less{
+  display: none;
+}
 
 
 /*-----------------------------------*\
@@ -456,6 +460,17 @@ body { background: var(--white); }
 \*-----------------------------------*/
 
 .popular { padding-block: var(--section-padding); }
+
+.popular-list li{
+  display: none;
+}
+
+.popular-list li:nth-child(1),
+.popular-list li:nth-child(2),
+.popular-list li:nth-child(3){
+  display: flex;
+}
+
 
 .popular-list,
 .popular-list > li:not(:last-child) { margin-bottom: 30px; }
@@ -467,12 +482,22 @@ body { background: var(--white); }
   height: 430px;
 }
 
-.popular-card .card-img { height: 100%; }
+
+
+.popular-card .card-img { 
+  height: 100%;
+}
+
+
 
 .popular-card .card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.popular-card .card-img:hover img {
+  transform: scale(1.1);
 }
 
 .popular-card .card-content {
