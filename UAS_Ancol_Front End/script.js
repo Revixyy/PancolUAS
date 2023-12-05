@@ -163,3 +163,12 @@ document.addEventListener('DOMContentLoaded', function () {
     viewLessBtn.style.display = 'none'; // Hide the "Show Less" button
   });
 });
+
+
+app.controller('promoCtrl', function($scope) {
+  $scope.promoImage = 'images/PROMOCUL.jpg';
+  $scope.promoTitle = 'Special Promo!';
+  $scope.promoDescription = 'Get exclusive discounts on our amazing Vacation.';
+  $scope.promoLink = 'https://www.ancol.com/promo';
+  $scope.promoButton = 'Redeem Now !!';
+});
