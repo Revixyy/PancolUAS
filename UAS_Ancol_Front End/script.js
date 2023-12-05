@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Event listener for Show Less button
   viewLessBtn.addEventListener('click', () => {
-    currentItem = 3; // Reset the currentItem to 3
+    currentItem = 8; // Reset the currentItem to 3
     hideAllElement(); // Hide all elements
     viewMoreBtn.style.display = 'flex'; // Show the "Load More" button
     viewLessBtn.style.display = 'none'; // Hide the "Show Less" button
