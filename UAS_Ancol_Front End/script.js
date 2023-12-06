@@ -143,11 +143,11 @@ document.addEventListener('DOMContentLoaded', function () {
   viewMoreBtn.addEventListener('click', () => {
     const elementList = document.querySelectorAll('.package-list li');
     
-    for (let i = currentItem; i < currentItem + 4 && i < elementList.length; i++) {
+    for (let i = currentItem; i < currentItem + 8 && i < elementList.length; i++) {
       elementList[i].style.display = 'flex';
     }
     
-    currentItem += 4 ;
+    currentItem += 8 ;
 
     if (currentItem >= elementList.length) {
       viewMoreBtn.style.display = 'none';
