@@ -143,11 +143,11 @@ document.addEventListener('DOMContentLoaded', function () {
   viewMoreBtn.addEventListener('click', () => {
     const elementList = document.querySelectorAll('.package-list li');
     
-    for (let i = currentItem; i < currentItem + 4 && i < elementList.length; i++) {
+    for (let i = currentItem; i < currentItem + 12 && i < elementList.length; i++) {
       elementList[i].style.display = 'flex';
     }
     
-    currentItem += 4 ;
+    currentItem += 12 ;
 
     if (currentItem >= elementList.length) {
       viewMoreBtn.style.display = 'none';
@@ -172,3 +172,40 @@ app.controller('promoCtrl', function($scope) {
   $scope.promoLink = 'https://www.ancol.com/promo';
   $scope.promoButton = 'Redeem Now !!';
 });
+
+//carousel
+var slideIndex = 1;
+        showSlide(slideIndex);
+
+        function nextSlide(n){
+            showSlide(slideIndex += n);
+        }
+
+        function dotSlide(n){
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n){
+            var i;
+            var slides = document.getElementsByClassName("imgslide");
+            var dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length){
+                slideIndex = 1;
+            }
+
+            if (n < 1){
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
