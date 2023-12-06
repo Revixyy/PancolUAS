@@ -856,9 +856,14 @@ img {
  * #FOOTER
 \*-----------------------------------*/
 .logo img {
-  height: 60%;
-  width: 60%;
+  margin-left: 137px;
+  width: 30%;
+  height: 30%;
+  
 }
+
+
+
 
 .footer-top {
   background: var(--gunmetal);
@@ -875,6 +880,7 @@ img {
 .footer-text {
   font-size: var(--fs-5);
   line-height: 1.7;
+  padding-top: 10px;
 }
 
 .footer-contact { margin-bottom: 30px; }
