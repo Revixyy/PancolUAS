@@ -1370,12 +1370,18 @@ address {
   .promo-banner a {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
     color: #fff;
     text-decoration: none;
     width: 200px;
     border-radius: 50px;
     margin-left: 205px;
+  }
+
+  .promo-banner a:is(:hover, :focus){
+    background: var(--yale-blue);
+    border-color: var(--yale-blue);
   }
     
   .promo-banner .promo-subtitle{
@@ -1385,6 +1391,5 @@ address {
     font-family: var(--ff-montserrat);
     margin-bottom: 8px;
   }
-
 
 }
