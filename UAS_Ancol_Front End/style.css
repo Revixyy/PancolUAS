@@ -1277,7 +1277,9 @@ address {
     
   }
 
-  .cta-content { width: calc(100% - 225px); }
+  .cta-content { 
+    width: calc(100% - 225px);
+  }
 
   .cta .section-text { margin-inline: 0; }
 
