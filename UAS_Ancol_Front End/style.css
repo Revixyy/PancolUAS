@@ -1277,7 +1277,9 @@ address {
     
   }
 
-  .cta-content { width: calc(100% - 225px); }
+  .cta-content { 
+    width: calc(100% - 225px);
+  }
 
   .cta .section-text { margin-inline: 0; }
 
@@ -1535,7 +1537,7 @@ address {
 }
 
 .wrapperrr{
-  width: 1200px;
+  width: 1100px;
   margin: 4% auto;
 }
 .wrapperrr-team{
@@ -1559,7 +1561,7 @@ address {
   width: 19%;
   height: auto;
   float: left;
-  box-shadow: 5px 5px 2px #000;
+  box-shadow: 1px 1px 2px #000;
   position: relative;
   display: block;
   /* overflow: hidden; */
@@ -1572,6 +1574,7 @@ address {
 .team-developer img{
   width: 100%;
   z-index: 1000;
+  
 }
 .team-developer h3{
   margin: 0;
@@ -1603,13 +1606,13 @@ address {
   transform: translateX(-100%);
 }
 .team-developer:hover:before{
-  border-color: red;
+  border-color: var(--bright-navy-blue);
   height: 100%;
   transform: translateX(0);
   transition: .3s transform linear, .3s height linear .3s;
 }
 .team-developer:hover:after{
-  border-color: red;
+  border-color: var(--bright-navy-blue);
   height: 100%;
   transform: translateX(0);
   transition: .3s transform linear, .3s height linear .5s;
