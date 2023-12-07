@@ -1,16 +1,4 @@
 /*-----------------------------------*\
- * #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
  * #CUSTOM PROPERTY
 \*-----------------------------------*/
 
@@ -78,9 +66,6 @@
 }
 
 
-
-
-
 /*-----------------------------------*\
  * #RESET
 \*-----------------------------------*/
@@ -124,8 +109,6 @@ html {
 }
 
 body { background: var(--white); }
-
-
 
 
 
@@ -201,8 +184,6 @@ body { background: var(--white); }
   color: var(--black-coral);
   font-size: var(--fs-5);
 }
-
-
 
 
 
@@ -369,9 +350,6 @@ body { background: var(--white); }
 }
 
 
-
-
-
 /*-----------------------------------*\
  * #HERO
 \*-----------------------------------*/
@@ -405,8 +383,6 @@ body { background: var(--white); }
   align-items: center;
   gap: 10px;
 }
-
-
 
 
 
@@ -465,6 +441,7 @@ body { background: var(--white); }
 .package-list li:nth-child(2){
   display:block;
 }
+
 
 /*-----------------------------------*\
  * #POPULAR
@@ -549,9 +526,6 @@ body { background: var(--white); }
 .popular-card :is(.card-subtitle, .card-title) > a { color: inherit; }
 
 .popular .btn { margin-inline: auto; }
-
-
-
 
 
 /*-----------------------------------*\
@@ -667,8 +641,6 @@ body { background: var(--white); }
 }
 
 .package .btn { margin-inline: auto; }
-
-
 
 
 
@@ -808,31 +780,6 @@ img {
 }
 
 
-/* .gallery { padding-block: var(--section-padding); }
-
-.gallery-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.gallery-image {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius-15);
-  overflow: hidden;
-}
-
-.gallery-item:nth-child(3) { grid-area: 1 / 2 / 3 / 3; }
-
-.gallery-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-
-
 
 
 /*-----------------------------------*\
@@ -851,7 +798,6 @@ img {
 
 
 
-
 /*-----------------------------------*\
  * #FOOTER
 \*-----------------------------------*/
@@ -861,9 +807,6 @@ img {
   height: 30%;
   
 }
-
-
-
 
 .footer-top {
   background: var(--gunmetal);
@@ -991,8 +934,6 @@ address {
 
 
 
-
-
 /*-----------------------------------*\
  * #GO TO TOP
 \*-----------------------------------*/
@@ -1023,8 +964,6 @@ address {
 }
 
 .go-top:is(:hover, :focus) { opacity: 1; }
-
-
 
 
 
@@ -1147,9 +1086,6 @@ address {
   .footer-bottom-list { justify-content: flex-end; }
 
 }
-
-
-
 
 
 /**
@@ -1450,8 +1386,6 @@ address {
   .footer-form .btn { width: 100%; }
 
 }
-
-
 
 
 

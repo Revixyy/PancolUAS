@@ -45,29 +45,6 @@ window.addEventListener("scroll", function () {
 
 });
 
-// YANG INI BIARIN AJA DULU TAKUTNYA YANG BAWAH ERROR MUACH
-// Load More Button
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const loadMoreBtn = document.getElementById('load-more');
-//   let currentItem = 3;
-
-//   loadMoreBtn.addEventListener('click', () => {
-//     const elementList = [...document.querySelectorAll('.popular-list li')];
-    
-//     for (let i = currentItem; i < currentItem + 3 && i < elementList.length; i++) {
-//       elementList[i].style.display = 'flex';
-//     }
-    
-//     currentItem += 3;
-
-//     if (currentItem >= elementList.length) {
-//       loadMoreBtn.style.display = 'none';
-//     }
-//   });
-// });
-// MUACH
-
 //show less button
 document.addEventListener('DOMContentLoaded', function () {
   const loadMoreBtn = document.getElementById('load-more');
@@ -113,8 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
     showLessBtn.style.display = 'none'; // Hide the "Show Less" button
   });
 });
-
-
 
 
 //LOAD MORE BAGIAN PACKAGES
