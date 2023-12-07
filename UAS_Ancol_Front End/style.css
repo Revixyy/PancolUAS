@@ -1552,7 +1552,8 @@ address {
   margin: 0;
   color: red;
   font-size: 45px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px black;
 }
 .team-developer{
   width: 19%;
